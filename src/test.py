@@ -66,6 +66,7 @@ def main():
         use_bnb=is_quantized,
     )
 
+
     metrics = trainer.evaluate(test_dataset, max_new_tokens=max_new_tokens)
 
     logger.info(

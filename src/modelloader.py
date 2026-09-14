@@ -16,6 +16,7 @@ class ModelLoader:
         self.tokenizer = None
         self.is_quantized = False
 
+
     def load_tokenizer(self):
         tokenizer = AutoTokenizer.from_pretrained(
             self.config.model.model_name_or_path,

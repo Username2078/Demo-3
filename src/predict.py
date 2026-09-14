@@ -5,6 +5,7 @@ import torch
 from src.configloader import ConfigLoader
 from src.datasetloader import DatasetLoader
 
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",

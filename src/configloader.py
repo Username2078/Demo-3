@@ -10,7 +10,6 @@ def _to_ns(d):
         return [_to_ns(v) for v in d]
     return d
 
-
 class ConfigLoader:
     def __init__(self, config_path: str):
         if not os.path.exists(config_path):

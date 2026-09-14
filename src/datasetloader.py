@@ -9,6 +9,7 @@ from src.template import get_template
 from datasets import Dataset
 from src.modelloader import DTYPE_MAP
 
+
 class DatasetLoader:
     def __init__(self, tokenizer, template_name, max_seq_length, overwrite_cache=False):
         self.tokenizer = tokenizer

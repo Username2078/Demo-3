@@ -1,6 +1,5 @@
 import logging
 import shutil
-
 import math
 import json
 import os

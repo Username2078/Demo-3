@@ -1,7 +1,6 @@
 import re
 from collections import defaultdict
 
-
 class NERMetric:
     _ENTITY_RE = re.compile(r"^(.+?):\s*GENE\s*$", re.IGNORECASE)
 

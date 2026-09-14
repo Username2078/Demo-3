@@ -11,7 +11,6 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
 
-
 def main():
     config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),"config/config.json")
     cfg = ConfigLoader(config_path)

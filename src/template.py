@@ -30,6 +30,7 @@ def register_qwen_template():
         system_prompt="你是生物医学命名实体识别专家。从输入句子中提取所有基因实体。每个实体单独一行，格式：实体名:GENE。如果没有基因实体，输出'无实体'。"
     )
 
+
 @register_template("default")
 def register_default_template() -> Template:
     return Template(
