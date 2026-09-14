@@ -550,7 +550,6 @@ class Trainer:
 
 
     def get_device(self):
-        """获取模型所在设备。兼容 device_map="auto" 的多卡分发"""
         if hasattr(self.model, "hf_device_map") and self.model.hf_device_map:
             first = next(iter(self.model.hf_device_map.values()))
             if isinstance(first, int):

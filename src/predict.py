@@ -12,7 +12,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# ---------------- 单条 prompt 构造，和 tokenizer_function 里的逻辑一致 ----------------
 def build_prompt_ids(tokenizer, template, sentence, instruction):
     messages = template.apply(instruction, sentence)
     prompt_str = tokenizer.apply_chat_template(
@@ -23,7 +22,6 @@ def build_prompt_ids(tokenizer, template, sentence, instruction):
 
 
 
-# ---------------- 单条生成 ----------------
 @torch.inference_mode()
 def predict_one(model, tokenizer, datasetloader, sentence, instruction,
                 device, max_new_tokens=128):
@@ -48,7 +46,6 @@ def predict_one(model, tokenizer, datasetloader, sentence, instruction,
     return pred_text
 
 
-# ---------------- 命令行参数 ----------------
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--adapter_path", type=str, default=None,
@@ -102,7 +99,7 @@ def main():
         pred = predict_one(
             model=model,
             tokenizer=tokenizer,
-            datasetloader=datasetloader,      # ← 传进去
+            datasetloader=datasetloader,
             sentence=sentence,
             instruction=instruction,
             device=device,
